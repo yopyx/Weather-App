@@ -1,0 +1,182 @@
+
+body{
+    background-image: url(/sources/sky.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #444;
+}
+
+#app{
+    display: grid;
+    grid-auto-rows: minmax(100px, auto);
+    height:100vh;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(0deg, rgba(12, 72, 203, 0.3), rgba(93, 9, 79, 0.3));
+    color: #69ffe4;
+    border-radius: 15px;
+    text-shadow: 1px 2px #3b4a6b;
+    justify-content: center;
+    grid-gap: 1em;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+
+}
+
+#div-button{
+    display:flexbox;
+    align-content: center;
+    justify-content: center;
+}
+
+.entry{
+    background: rgba(59, 74, 107, .4);
+    border-radius: 10px;
+    width: auto;
+    overflow-wrap: break-word;
+    overflow:auto;
+}
+
+#entryHolder{
+    display: block;
+    min-height: 100px;
+    max-width: 400px;
+    padding: 5px;
+    color:#ffa28e;
+    text-shadow: 1px 1px #3b4a6b;
+
+}
+
+.headline {
+    display:grid;
+    justify-content: center;
+
+}
+
+.title{
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+label{
+    display:block;
+    font-size: 27px;
+}
+
+input{
+    display:block;
+    height: 60px;
+    width: 320px;
+    background:rgba(59, 74, 107, .4);
+    border-radius: 10px;
+    color: #ffa28e;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+}
+
+button{
+    display: block;
+    width: 300px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 45px;
+    background: #3b4a6b;
+    color: #d33b19;
+    font-size: 26px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    box-shadow: 2px 4px 5px #444;
+    cursor: pointer;
+}
+
+h1{
+    font-size: 40px;
+    color: #3b4a6b;
+    text-shadow: 1px 1px #69ffe4;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+textarea{
+    background:rgba(59, 74, 107, .4);
+    color: #ffa28e;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    border-radius: 15px;
+}
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+/* Style for Placeholder Text*/
+::placeholder { /* Firefox, Chrome, Opera */ 
+    color: #ffa28e; 
+    font-family: 'Oswald', sans-serif;
+
+} 
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+    color: #ffa28e; 
+    font-family: 'Oswald', sans-serif;
+
+} 
+  
+::-ms-input-placeholder { /* Microsoft Edge */ 
+    color: #ffa28e; 
+    font-family: 'Oswald', sans-serif;
+
+}
+
+@media only screen and (max-width: 57em){
+    body{
+        background-size: 550%;
+    }
+
+    #app{
+        justify-content: center;
+        align-items: center;
+        padding-left: 12px;
+        background: linear-gradient(0deg, rgba(12, 72, 203, 0), rgba(93, 9, 79, 0));
+        
+    }
+
+    h1{
+        font-size: 2em;
+    }
+
+    button{
+        width: 200px;
+        top: 0px;
+    }
+
+    .entry{
+        width:90%;
+        justify-self:center;
+    }
+}
+
+/* Galaxy fold screen */
+@media(max-width: 280px){
+    #app{
+        display: inline;
+    }
+
+    button{
+        left: 40px;
+    }
+
+    .entry{
+        width:350px;
+        justify-self:center;
+    }
+}
